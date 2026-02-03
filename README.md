@@ -1,238 +1,233 @@
-🌾 Smart Crop Advisory System
+<div align="center">
 
-An AI-powered web platform that recommends the most suitable crops for farmers based on real-time weather conditions and estimated soil parameters using Machine Learning.
+# 🌾 Smart Crop Advisory System  
+### AI Powered Crop Recommendation Platform for Farmers  
 
-🚀 Project Overview
+🚜 Machine Learning | 🌦 Live Weather API | 🌱 Soil Intelligence | 📍 Location Based  
 
-The Smart Crop Advisory System helps farmers make informed crop selection decisions by analyzing:
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_Framework-green)
+![ML](https://img.shields.io/badge/Machine_Learning-RandomForest-orange)
+![Status](https://img.shields.io/badge/Project-Capstone-success)
 
-🌦 Live Weather Data (Temperature, Rainfall, Humidity)
+</div>
 
-🌱 Estimated Soil Nutrients (NPK, pH)
+---
 
-📍 Location-based Inputs (Village / City Search)
+## 🌟 Project Overview  
 
-🤖 Machine Learning Crop Recommendation Model
+**Smart Crop Advisory System** is an AI-driven agriculture decision support platform that helps farmers choose the **best crop to grow** based on:
 
-Farmers only need to enter their village or city name, and the system automatically fetches environmental parameters and suggests the top suitable crops with confidence scores.
+- 🌦 Real-time Weather Conditions  
+- 🌱 Soil Nutrient Estimation (NPK + pH)  
+- 📍 Location-Based Data  
+- 🤖 Machine Learning Prediction Model  
 
-✨ Key Features
+👉 Farmers only need to **enter their village or city name** — the system automatically fetches environmental data and provides **top crop recommendations with confidence score**.
 
-✔ Location search with live suggestions
-✔ Automatic weather data fetching using API
-✔ Soil nutrient estimation (Satellite/Global Dataset Based)
-✔ Machine Learning crop prediction
-✔ Top 3 crop recommendations with confidence percentage
-✔ Simple farmer-friendly UI
-✔ REST API based backend architecture
-✔ Modular Flask backend structure
+---
 
-🧠 Machine Learning Model
+## 🎯 Problem Statement  
 
-The system uses a Random Forest Classifier trained on crop recommendation dataset.
+Farmers often face challenges due to:
 
-Input Features:
+- Climate variability  
+- Lack of soil testing facilities  
+- Guess-based crop selection  
+- Poor yield planning  
 
-Nitrogen (N)
+This system solves these issues by offering **data-driven intelligent crop recommendations**.
 
-Phosphorus (P)
+---
 
-Potassium (K)
+## 🚀 Key Features  
 
-Temperature
+✅ Live City/Village Search  
+✅ Automatic Weather Data Fetching  
+✅ Soil Nutrient Estimation  
+✅ Machine Learning Based Crop Prediction  
+✅ Top 3 Crop Recommendations with Confidence  
+✅ Farmer Friendly UI  
+✅ REST API Based Architecture  
+✅ Modular Backend Design  
 
-Humidity
+---
 
-Rainfall
+## 🧠 Machine Learning Model  
 
-Soil pH
+### Algorithm Used  
+✔ Random Forest Classifier  
 
-Output:
+### Input Parameters  
 
-Recommended Crop Label
+| Feature | Description |
+--------|------------
+Nitrogen (N) | Soil Nitrogen Content  
+Phosphorus (P) | Soil Phosphorus Content  
+Potassium (K) | Soil Potassium Content  
+Temperature | Current Temperature  
+Humidity | Atmospheric Humidity  
+Rainfall | Weather Rainfall  
+pH | Soil Acidity Level  
 
-🏗 Project Architecture
+### Output  
+
+🎯 Recommended Crop Label  
+
+---
+
+## 🏗 System Architecture  
+
+User Location Input
+↓
+Geocoding API
+↓
+Weather API + Soil Estimation
+↓
+Feature Processing
+↓
+ML Prediction Engine
+↓
+Crop Recommendation Output
+
+
+---
+
+## 📂 Project Folder Structure  
+
 smart-crop-advisory-system
 │
 ├── backend
-│   ├── routes
-│   │   └── prediction_routes.py
-│   ├── services
-│   │   ├── weather_service.py
-│   │   ├── soil_service.py
-│   │   └── geocode_service.py
-│   ├── utils
-│   └── app.py
+│ ├── routes
+│ ├── services
+│ ├── utils
+│ └── app.py
 │
 ├── model
-│   ├── train_model.py
-│   └── crop_model.pkl
+│ ├── train_model.py
+│ └── crop_model.pkl
 │
 ├── dataset
-│   └── Crop_recommendation.csv
+│ └── Crop_recommendation.csv
 │
 ├── frontend
-│   ├── static
-│   │   ├── css
-│   │   └── js
-│   └── templates
-│       └── index.html
+│ ├── static
+│ └── templates
 │
 ├── .env
 ├── requirements.txt
-├── README.md
-└── venv
+└── README.md
 
-🖥 Tech Stack
-Frontend:
 
-HTML
+---
 
-CSS
+## 🛠 Tech Stack  
 
-JavaScript
+### Frontend  
+- HTML  
+- CSS  
+- JavaScript  
 
-Backend:
+### Backend  
+- Python  
+- Flask REST API  
 
-Python
+### Machine Learning  
+- Scikit-learn  
+- Pandas  
+- NumPy  
 
-Flask REST API
+### APIs Used  
+- OpenWeatherMap API  
+- OpenStreetMap Geocoding API  
 
-Machine Learning:
+---
 
-Scikit-learn
+## 📊 Dataset Information  
 
-Pandas
+The model is trained using **Crop Recommendation Dataset** which contains:
 
-NumPy
+- Soil Nutrient Values  
+- Weather Parameters  
+- Crop Labels  
 
-APIs Used:
+Dataset Source: Kaggle  
 
-OpenWeatherMap API (Weather Data)
+---
 
-Geocoding API (Location Search)
+## ⚙ Installation & Setup  
 
-Soil Estimation Dataset (FAO/SoilGrids Inspired)
+### 🔹 Step 1 — Clone Repository  
 
-📊 Dataset
-
-The model is trained using the Crop Recommendation Dataset containing:
-
-Soil nutrients
-
-Weather parameters
-
-Crop labels
-
-Source:
-Kaggle Crop Recommendation Dataset
-
-⚙ Installation & Setup
-Step 1 — Clone Repository
+```bash
 git clone https://github.com/yourusername/smart-crop-advisory-system.git
 cd smart-crop-advisory-system
-
-Step 2 — Create Virtual Environment
+🔹 Step 2 — Create Virtual Environment
 python -m venv venv
-
-
 Activate:
 
 Windows:
 
 venv\Scripts\activate
-
-
-Mac/Linux:
+Linux/Mac:
 
 source venv/bin/activate
-
-Step 3 — Install Dependencies
+🔹 Step 3 — Install Dependencies
 pip install -r requirements.txt
-
-Step 4 — Create .env File
-
-Inside project root:
+🔹 Step 4 — Add API Key
+Create .env file:
 
 OPENWEATHER_API_KEY=your_api_key_here
-
-Step 5 — Train ML Model (Optional)
-
-If model file is not present:
-
+🔹 Step 5 — Train Model (Optional)
 python model/train_model.py
-
-Step 6 — Run Flask Server
+🔹 Step 6 — Run Application
 python -m backend.app
-
-
-Server will start at:
+Open browser:
 
 http://127.0.0.1:5000
+🧪 How System Works
+1️⃣ User enters location
+2️⃣ System fetches latitude & longitude
+3️⃣ Weather API provides real-time data
+4️⃣ Soil data is estimated
+5️⃣ ML model predicts crops
+6️⃣ Top 3 crops displayed with confidence
 
-🌐 How It Works
+📸 Application Preview
+🟢 Location Search
+🟢 Crop Recommendation Dashboard
+🟢 Weather & Soil Information Panel
 
-User enters village/city name
+(Add screenshots here for GitHub visual impact)
 
-System fetches latitude and longitude
-
-Weather API provides real-time data
-
-Soil parameters are estimated
-
-ML model predicts best crops
-
-Top 3 recommendations are displayed
-
-📸 UI Preview
-
-Smart Crop Advisory Dashboard
-
-Location Input
-
-Predict Crop Button
-
-Crop Recommendation Cards
-
-Weather Information
-
-Soil Data Summary
-
-⚠ Important Note
-
-Soil data is estimated using public datasets and not real-time physical sensors.
-This system is designed for educational and advisory purposes.
+⚠ Disclaimer
+Soil parameters are estimated using public datasets.
+This system is designed for educational and advisory purposes only.
 
 👨‍💻 Developer
-
 Shubham Shrivastava
-Final Year B.Tech CSE Student
-Capstone Project — Smart Agriculture Domain
+🎓 B.Tech Computer Science Engineering
+📌 Capstone Project – Smart Agriculture Domain
 
-📌 Future Enhancements
+🌱 Future Enhancements
+🚀 Crop Disease Detection
+🚀 Yield Prediction System
+🚀 Fertilizer Recommendation Engine
+🚀 Mobile App Version
+🚀 Regional Language Support
+🚀 AI Chatbot for Farmers
 
-🌾 Crop disease detection using images
+⭐ Support This Project
+If you found this project useful:
 
-📱 Mobile app version
-
-🛰 Satellite-based soil monitoring
-
-📊 Yield prediction
-
-🌍 Regional language support
-
-🤖 AI Chatbot for farmers
-
-⭐ Support
-
-If you like this project:
-
-Give ⭐ Star on GitHub
-
-Fork for improvement
-
-Share with others
+⭐ Star this repository
+🍴 Fork for contributions
+📢 Share with others
 
 📄 License
+This project is licensed under MIT License.
 
-This project is licensed under the MIT License.
+<div align="center">
+🌾 Empowering Farmers With Artificial Intelligence 🚜
+Made with ❤️ for Smart Agriculture
+</div> ```
